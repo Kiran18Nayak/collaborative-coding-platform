@@ -1,0 +1,225 @@
+/* Version Control Styles */
+
+/* Version Control Panel */
+.version-control-panel {
+    display: none;
+    flex-direction: column;
+    width: 300px;
+    background-color: var(--bg-secondary);
+    border-left: 1px solid var(--border-color);
+    overflow-y: auto;
+    padding: 1rem;
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.version-control-panel.active {
+    display: flex;
+}
+
+.version-control-status {
+    background-color: var(--bg-primary);
+    border-radius: 5px;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+}
+
+.version-control-status p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.version-control-status.initialized p {
+    color: var(--success-color);
+}
+
+.version-control-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.git-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.git-btn:hover {
+    background-color: var(--accent-secondary);
+}
+
+.git-btn:disabled {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    cursor: not-allowed;
+}
+
+.version-control-section {
+    margin-bottom: 1.5rem;
+}
+
+.version-control-section h4 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.git-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.75rem;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.git-action-btn:hover {
+    background-color: var(--accent-primary);
+    color: white;
+}
+
+.git-action-btn:disabled {
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    cursor: not-allowed;
+}
+
+.branch-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.branch-select {
+    padding: 0.4rem;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.git-output {
+    background-color: var(--bg-primary);
+    border-radius: 5px;
+    padding: 0.75rem;
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    height: 150px;
+    overflow-y: auto;
+    border: 1px solid var(--border-color);
+    white-space: pre-wrap;
+}
+
+/* Git Modal Styles */
+.git-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.git-modal-content {
+    background-color: var(--bg-secondary);
+    margin: 10% auto;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 500px;
+    max-width: 90%;
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.git-modal h3 {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.git-form-group {
+    margin-bottom: 1rem;
+}
+
+.git-form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.git-form-group input,
+.git-form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.git-form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.git-modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.git-modal-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.git-modal-btn.primary {
+    background-color: var(--accent-primary);
+    color: white;
+    border: none;
+}
+
+.git-modal-btn.primary:hover {
+    background-color: var(--accent-secondary);
+}
+
+.git-modal-btn.secondary {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.git-modal-btn.secondary:hover {
+    background-color: var(--bg-primary);
+}
